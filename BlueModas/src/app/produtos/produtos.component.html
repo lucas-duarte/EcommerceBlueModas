@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let produtos of Produtos">
+            <div class="card card-produto border border-dark" style="width: 18rem;">
+                <img class="card-img-top"
+                    src={{produtos.imagem}}
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">{{FormataPreco(produtos.preco)}}</h4>
+                    <p class="card-text">{{produtos.nome}}</p>
+                    <button type="button" class="btn btn-outline-dark" (click)="AdicionaCarinho(produtos)">
+                        <img src="../../assets/img/cart_white.svg" class="card_white">
+                        <img src="../../assets/img/cart_black.svg" class="card_black"> Adicione ao carinnho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding: 50px;"></div>

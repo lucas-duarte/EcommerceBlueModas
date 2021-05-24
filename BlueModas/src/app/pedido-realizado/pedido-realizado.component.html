@@ -1,0 +1,41 @@
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{Cliente.nome}} </td>
+            <td>{{Cliente.clienteId}}</td>
+            <td>{{Cliente.telefone}}</td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Produto</th>
+            <th scope="col" style="margin-top: 20px;">Nome</th>
+            <th scope="col">Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produtos of Cliente.compras[0].comprasProdutos">
+            <td>
+                <img src="{{produtos.produto.imagem}}"
+                    width="50px">
+            </td>
+            <td>{{produtos.produto.nome}}</td>
+            <td>{{FormataPreco(produtos.produto.preco)}}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-8">
+        <h5>CÓDIGO COMPRA: {{Compras.compraId}}</h5>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-warning btn-lg btn-block" routerLink="/compras" (click)="onClose()">Fechar</button>
+    </div>
+</div>

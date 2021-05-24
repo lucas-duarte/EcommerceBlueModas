@@ -1,0 +1,39 @@
+.navbar {
+    margin-bottom: 2%;
+}
+
+.navbar-brand{
+    margin-left: 20px;
+}
+.centro {
+    margin: 0 auto;
+}
+
+.bg-blue {
+    background-color: #86d3db;
+}
+
+.pesquisa {
+    width: 500px;
+}
+
+.carinho{
+    margin-right: 20px;
+}
+
+button:hover .card_black {
+    display: none;
+  } 
+
+  button:hover .card_white {
+    display: block;
+  } 
+
+  button .card_white {
+    display: none;
+    float:left;
+  } 
+
+  .modal-content{
+     
+  }

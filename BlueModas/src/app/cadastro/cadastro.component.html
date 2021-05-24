@@ -1,0 +1,18 @@
+<form  style="padding: 5px;" [formGroup]="clienteForm" (submit)="clienteSubmit()" >
+    <div class="form-group">
+        <label for="exampleInputPassword1">Nome</label>
+        <input type="text" class="form-control" formControlName="nome" placeholder="Nome" style="margin-top: 4px;" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Email" style="margin-top: 4px;" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Telefone</label>
+        <input type="number" class="form-control"formControlName="telefone"  placeholder="Telefone" style="margin-top: 4px;" required>
+    </div>
+    <br>
+    <button class="btn btn-warning btn-lg btn-block" [disabled]="!clienteForm.valid">CONCLUIR</button>
+</form>

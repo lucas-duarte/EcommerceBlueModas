@@ -1,0 +1,25 @@
+.card-produto {
+    margin: 10px;
+    padding: 20px;
+}
+
+.card-produto img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  button:hover .card_black {
+    display: none;
+  } 
+
+  button:hover .card_white {
+    display: block;
+  } 
+
+  button .card_white {
+    display: none;
+    float:left;
+  } 

@@ -1,0 +1,19 @@
+.btn-sub, .btn-add {
+    width: 50px;
+}
+
+.preco {
+    margin-top: 50px;
+}
+
+.space-top {
+    margin-top:20px;
+}
+
+.bg-blue {
+    background-color: #86d3db;
+}
+
+.card-remove{
+    margin-top: 30px;
+}

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210521184651_BlueModas.cs" />
+    <Compile Remove="Migrations\20210521184651_BlueModas.Designer.cs" />
+    <Compile Remove="Migrations\20210522170711_Initial.cs" />
+    <Compile Remove="Migrations\20210522170711_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20210522174957_Initial.cs" />
+    <Compile Remove="Migrations\20210522174957_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20210523230727_Initial.cs" />
+    <Compile Remove="Migrations\20210523230727_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPIBlueModas.Dominio\WebAPIBlueModas.Dominio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

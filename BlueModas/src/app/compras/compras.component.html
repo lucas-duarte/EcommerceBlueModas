@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body" *ngFor="let produtos of Produtos" >
+        <div class="row" *ngIf="Produtos[0]">
+            <h4 class="card-title" style="margin-bottom: 15px;">{{produtos.nome}}</h4>
+            <div class="col">
+                <img class="card-img-top" style="width: 10rem; margin-left: 5px" src="{{produtos.imagem}}"
+                    alt="Card image cap">
+            </div>
+            <!--
+            <div class="col text-center">
+                
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary btn-sub bg-blue">-</button>
+                    <a class="btn btn-outline-dark">1</a>
+                    <button type="button" class="btn btn-secondary btn-add bg-blue">+</button>
+                </div>
+                
+            </div>
+            -->
+            <div class="col text-center">
+                <div class="input-group ">
+                    <div class="col">
+                        <!--<p class="card-text" style="margin-top: -38px;">Valor</p>-->
+                        <h3 class="preco">{{FormataPreco(produtos.preco)}}</h3>
+                        <img src="../../assets/img/remove.svg" class="card-remove" width="24px"
+                            (click)="RemoverProduto(produtos)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <h6 class="card-title text-center" *ngIf="!Produtos[0]">Carrinho Vazio...</h6>
+    <div class="row" style="margin: 2.5%;" *ngIf="Produtos[0]">
+        <div class="col-6 text-center">
+            <button type="button" class="btn btn-warning btn-lg btn-block" routerLink="cadastro">FINALIZAR
+                COMPRA</button>
+        </div>
+        <div class="col text-center">
+            <h6 class="card-title">TOTAL: </h6>
+            <h3 class="card-title">{{FormataPreco(total.toFixed(2))}}</h3>
+        </div>
+    </div>
+</div>
